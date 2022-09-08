@@ -1,0 +1,7 @@
+/* 말줄임소스 */
+@mixin elip{
+    display: block; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    overflow: hidden;
+}

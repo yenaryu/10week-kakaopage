@@ -1,0 +1,291 @@
+
+.sc-groupflex{margin-top: 11px;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 22px 20px 0px;
+    position: relative;
+
+    &.rank{padding: 0;}
+}
+
+/* 제목 */
+.h2-title{
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+
+    &.rank{padding: 22px 20px 0;}
+    .num{
+        margin: 0;
+        min-width: 0;
+        color: #999;
+        font-size: 14px;
+        margin-left: 4px;
+        font-style: normal;
+        position: absolute;
+        top: 27px;
+    }
+}
+
+/* 더보기 */
+.link-more{ 
+    align-items: center;
+    color: #999;
+    display: flex;
+    font-size: 16px;
+    position: absolute;
+    top: 23px; right: 16px;
+    cursor: pointer;
+
+    &::after{
+        content: '';
+        margin: 0;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+        margin-left: 4px;
+        margin-top: 2px;
+        width: 8px;
+        height: 14px;
+        background: url(../image/linkmore.svg) no-repeat center center;
+    }
+}
+
+
+.sort-list{margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    &.rank{padding: 20px 0;}
+}
+
+.sort-item{padding: 0 0 10px 0;
+    &.rank{padding: 10px 20px 0 0;}
+}
+
+.sort-area{
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    height: 96px;
+    background-color: #fff;
+    display: flex;
+    cursor: pointer;
+
+    &.rank{height: auto;}
+
+    .ranknum{    
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 56px;
+        display: flex;
+        font-size: 22px;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+
+.sort-img{    
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &.rank{    
+        margin: 0;
+        min-width: 0;
+        width: 84px;
+        height: 114px;
+        overflow: hidden;
+        img{margin: 0px 0px 0px -0.222222px;
+            min-width: 0px;
+            max-width: 84.4444px;
+            width: 84.4444px;
+            height: 114px;
+            cursor: pointer;}
+    }
+
+    img{
+        margin: 0;
+        min-width: 0;
+        width: 142px;
+        height: 96px;
+        overflow: hidden;
+        cursor: pointer;}
+}
+
+.time{
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+    display: flex;
+    margin-right: 1px;
+    height: 26px; width: 26px;
+    background: url(../image/time.png) no-repeat center/26px auto;
+    cursor: pointer;
+    }
+.milion{
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: flex-start;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: url(../image/milion.png) no-repeat center/40px auto;
+    cursor: pointer;
+}
+
+.wticon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+    display: flex;
+    max-width: 100%;
+    margin-right: 1px;
+    height: 26px; width: 40px;
+    background: url(../image/wticon.png) no-repeat center/40px auto;
+    cursor: pointer;}
+
+.wnicon{position: absolute;
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+    display: flex;
+    max-width: 100%;
+    margin-right: 1px;
+    height: 26px; width: 52px;
+    background: url(../image/wnicon.png) no-repeat center/52px auto;
+    cursor: pointer;}
+
+
+.sort-txt{
+    flex: 1;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 9px;
+    flex-direction: column;
+    display: flex;}
+.title{color: #333333;
+    font-size: 16px;
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+.tag{
+    align-items: center;
+    margin-top: 2px;
+    margin-right: 3px;
+    display: flex;
+    vertical-align: top;
+    height: 1.4em;
+    cursor: pointer;
+}
+.new{
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../image/new.svg) no-repeat center/16px auto;
+    cursor: pointer;
+}
+.up{
+    width: 22px;
+    height: 22px;
+    display: block;
+    background: url(../image/up.svg) no-repeat center/22px auto;
+    cursor: pointer;
+}
+.age{
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-left: 2px;
+    background: url(../image/age.png) no-repeat center/16px auto;
+    cursor: pointer;
+}
+.desc{flex: 1;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.info{    
+    font-weight: 400;
+    font-size: 14px;
+    color: #9c9c9c;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    .viewer{
+        margin-right: 4px;
+        display: block;
+        width: 14px;
+        height: 12px;
+        background: url(../image/viewer.png) no-repeat center/11px auto;
+        cursor: pointer;
+    }
+    .bar{
+        display: block;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        min-width: 1px;
+        width: 1px;
+        height: 11px;
+        background-color: #d9d9d9;
+        cursor: pointer;
+    }
+}
+
+.day{
+    margin: 0;
+    min-width: 0;
+    font-size: 14px;
+    color: #9c9c9c;
+    font-weight: 350;
+    margin-top: 22px;
+    cursor: pointer;}
+
+.rankchange{
+    align-items: center;
+    margin-right: 20px;
+    display: flex;
+    margin-left: 6px;
+    cursor: pointer;
+
+    .ranknone{max-width: 100%;
+        height: auto;
+        height: 1px;
+        width: 9px;
+        display: block;
+        background: url(../image/ranknone.png) no-repeat center/9px auto;
+        cursor: pointer;
+    }
+}
+.rankchange-num{
+        margin: 0px 20px 0px 6px;
+        min-width: 0px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    .rankup{
+        margin-right: 4px;
+        width: 10px;
+        height: 13px;
+        display: block;
+        background: url(../image/rankup.png) no-repeat center/10px auto;
+        cursor: pointer;
+    }
+    .rankup-num{font-size: 18px;
+        color: rgb(239, 83, 80);
+        cursor: pointer;
+    }
+    
+}
