@@ -94,55 +94,36 @@ fetch('./assets/data/data.json')
 })
 
 
-// /* @@@@@@@@@@@@@@@ true/null icon @@@@@@@@@@@ */
-//time
-// fetch('./assets/data/data.json') 
-// .then((response) => response.json()) 
-// .then((json) => {
-//     timeEl = `<span class="time"><span class="blind">무료 시간</span></span>`
-
-//     let html = '';
-//     json.forEach(el => { 
-//         isTime = (el.time) ? timeEl : null;
-
-//         html += `
-//         <div class="sort-img">${isTime}</div>
-//         `;
-//     });
-//     $('.sc-groupflex .sort-list').html(html);
-// })
-
-
 /* @@@@@@@@@@ Items @@@@@@@@@@@ */
 fetch('./assets/data/data.json')
 .then((response) => response.json())
 .then((json) => {
     items = json.items
 
-    var freeweb = items.filter(function (parm) {return parm.cate == "freeweb" }); 
-    var freenov = items.filter(function (parm) {return parm.cate == "freenov" });
-    var popweb = items.filter(function (parm) {return parm.cate == "popweb" }); 
-    var popnov = items.filter(function (parm) {return parm.cate == "popnov" }); 
-    var rank = items.filter(function (parm) {return parm.cate == "rank" }); 
-    var webmon = items.filter(function (parm) {return parm.cate == "webmon" }); 
-    var webtue = items.filter(function (parm) {return parm.cate == "webtue" }); 
-    var webwed = items.filter(function (parm) {return parm.cate == "webwed" }); 
-    var webthr = items.filter(function (parm) {return parm.cate == "webthr" }); 
-    var webfri = items.filter(function (parm) {return parm.cate == "webfri" }); 
-    var websat = items.filter(function (parm) {return parm.cate == "websat" }); 
-    var websun = items.filter(function (parm) {return parm.cate == "websun" }); 
-    var webend = items.filter(function (parm) {return parm.cate == "webend" }); 
-    var novmon = items.filter(function (parm) {return parm.cate == "novmon" }); 
-    var novtue = items.filter(function (parm) {return parm.cate == "novtue" }); 
-    var novwed = items.filter(function (parm) {return parm.cate == "novwed" }); 
-    var novthr = items.filter(function (parm) {return parm.cate == "novthr" }); 
-    var novfri = items.filter(function (parm) {return parm.cate == "novfri" }); 
-    var novsat = items.filter(function (parm) {return parm.cate == "novsat" }); 
-    var novsun = items.filter(function (parm) {return parm.cate == "novsun" }); 
-    var novend = items.filter(function (parm) {return parm.cate == "novend" }); 
-    var milweb = items.filter(function (parm) {return parm.cate == "milweb" }); 
-    var milnov = items.filter(function (parm) {return parm.cate == "milnov" }); 
-    var best = items.filter(function (parm) {return parm.cate == "best" }); 
+    var freeweb = items.filter(function (parm) {return parm.cate == "freeweb"}); 
+    var freenov = items.filter(function (parm) {return parm.cate == "freenov"});
+    var popweb = items.filter(function (parm) {return parm.cate == "popweb"}); 
+    var popnov = items.filter(function (parm) {return parm.cate == "popnov"}); 
+    var rank = items.filter(function (parm) {return parm.cate == "rank"}); 
+    var webmon = items.filter(function (parm) {return parm.cate == "webmon"}); 
+    var webtue = items.filter(function (parm) {return parm.cate == "webtue"}); 
+    var webwed = items.filter(function (parm) {return parm.cate == "webwed"}); 
+    var webthr = items.filter(function (parm) {return parm.cate == "webthr"}); 
+    var webfri = items.filter(function (parm) {return parm.cate == "webfri"}); 
+    var websat = items.filter(function (parm) {return parm.cate == "websat"}); 
+    var websun = items.filter(function (parm) {return parm.cate == "websun"}); 
+    var webend = items.filter(function (parm) {return parm.cate == "webend"}); 
+    var novmon = items.filter(function (parm) {return parm.cate == "novmon"}); 
+    var novtue = items.filter(function (parm) {return parm.cate == "novtue"}); 
+    var novwed = items.filter(function (parm) {return parm.cate == "novwed"}); 
+    var novthr = items.filter(function (parm) {return parm.cate == "novthr"}); 
+    var novfri = items.filter(function (parm) {return parm.cate == "novfri"}); 
+    var novsat = items.filter(function (parm) {return parm.cate == "novsat"}); 
+    var novsun = items.filter(function (parm) {return parm.cate == "novsun"}); 
+    var novend = items.filter(function (parm) {return parm.cate == "novend"}); 
+    var milweb = items.filter(function (parm) {return parm.cate == "milweb"}); 
+    var milnov = items.filter(function (parm) {return parm.cate == "milnov"}); 
+    var best = items.filter(function (parm) {return parm.cate == "best"}); 
 
     var upEl = `<span class="up"><span class="blind">UP</span></span>`;
     var timeEl = `<span class="time"><span class="blind">무료 시간</span></span> `;
