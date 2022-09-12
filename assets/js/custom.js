@@ -370,7 +370,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         webtuehtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -401,7 +400,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         webwedhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -432,7 +430,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         webthrhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -463,7 +460,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         webfrihtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -494,7 +490,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         websathtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -525,7 +520,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         websunhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -556,7 +550,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         webendhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -587,7 +580,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novmonhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -618,7 +610,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novtuehtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -649,7 +640,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novwedhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -680,7 +670,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novthrhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -711,7 +700,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novfrihtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -742,7 +730,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novsathtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -773,7 +760,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novsunhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -804,7 +790,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
         novendhtml += `<li class="book-item">
                                     <a href="" class="book-area">
@@ -835,7 +820,6 @@ fetch('./assets/data/data.json')
         isTime = (el.time) ? timeEl : '';
         isNew = (el.new) ? newEl : '';
         isAge = (el.age) ? ageEl : '';
-        isStar = (el.star) ? starEl : '';
 
          milwebhtml += `<li class="sort-item">
                              <a href="" class="sort-area">
