@@ -96,21 +96,21 @@ fetch('./assets/data/data.json')
 
 // /* @@@@@@@@@@@@@@@ true/null icon @@@@@@@@@@@ */
 //time
-fetch('./assets/data/data.json') 
-.then((response) => response.json()) 
-.then((json) => {
-    timeEl = `<span class="time"><span class="blind">무료 시간</span></span>`
+// fetch('./assets/data/data.json') 
+// .then((response) => response.json()) 
+// .then((json) => {
+//     timeEl = `<span class="time"><span class="blind">무료 시간</span></span>`
 
-    let html = '';
-    json.forEach(el => { 
-        isTime = (el.time) ? timeEl : null;
+//     let html = '';
+//     json.forEach(el => { 
+//         isTime = (el.time) ? timeEl : null;
 
-        html += `
-        <div class="sort-img">${isTime}</div>
-        `;
-    });
-    $('.sc-groupflex .sort-list').html(html);
-})
+//         html += `
+//         <div class="sort-img">${isTime}</div>
+//         `;
+//     });
+//     $('.sc-groupflex .sort-list').html(html);
+// })
 
 
 /* @@@@@@@@@@ Items @@@@@@@@@@@ */
@@ -143,21 +143,34 @@ fetch('./assets/data/data.json')
     var milweb = items.filter(function (parm) {return parm.cate == "milweb" }); 
     var milnov = items.filter(function (parm) {return parm.cate == "milnov" }); 
     var best = items.filter(function (parm) {return parm.cate == "best" }); 
+
+    var upEl = `<span class="up"><span class="blind">UP</span></span>`;
+    var timeEl = `<span class="time"><span class="blind">무료 시간</span></span> `;
+    var newEl = `<span class="new"><span class="blind">new</span></span>`;
+    var ageEl = `<span class="age"><span class="blind">age</span></span>`;
     
 
     //무료웹툰
     freewebhtml='';
     freeweb.forEach(el => {
+
+        isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
         freewebhtml += `<li class="sort-item">
                             <a href="" class="sort-area">
                                 <div class="sort-img">
                                     <img src="${el.img}" alt="${el.title}">
-                                    
+                                    ${timeEl}
                                 </div>
                                 <div class="sort-txt"> 
                                     <strong class="title">
                                         <div class="tag">
-                                            <span class="up"><span class="blind">UP</span></span>
+                                            ${isUp}
+                                            ${isNew}
+                                            ${isAge}
                                         </div>
                                         ${el.title}
                                     </strong>
@@ -175,16 +188,24 @@ fetch('./assets/data/data.json')
     //무료소설
     freenovhtml='';
     freenov.forEach(el => {
+
+        isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
         freenovhtml += `<li class="sort-item">
                             <a href="" class="sort-area">
                                 <div class="sort-img">
                                     <img src="${el.img}" alt="${el.title}">
-                                    <span class="time"><span class="blind">무료 시간</span></span> 
+                                    ${timeEl}
                                 </div>
                                 <div class="sort-txt"> 
                                     <strong class="title">
                                         <div class="tag">
-                                            <span class="up"><span class="blind">UP</span></span>
+                                            ${isUp} 
+                                            ${isNew}
+                                            ${isAge}
                                         </div>
                                         ${el.title}
                                     </strong>
@@ -203,6 +224,12 @@ fetch('./assets/data/data.json')
     //인기웹툰
     popwebhtml='';
     popweb.forEach(el => {
+
+        isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
         popwebhtml += `<li class="sort-item">
                             <a href="" class="sort-area">
                                 <div class="sort-img">
@@ -212,8 +239,9 @@ fetch('./assets/data/data.json')
                                 <div class="sort-txt"> 
                                     <strong class="title">
                                         <div class="tag">
-                                            <span class="new"><span class="blind">NEW</span></span>
-                                            <span class="age"><span class="blind">15세 관람가</span></span>
+                                            ${isUp} 
+                                            ${isNew}
+                                            ${isAge}
                                         </div>
                                         ${el.title}
                                     </strong>
@@ -231,6 +259,12 @@ fetch('./assets/data/data.json')
     //인기소설
     popnovhtml='';
     popnov.forEach(el => {
+
+        isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
         popnovhtml += `<li class="sort-item">
                             <a href="" class="sort-area">
                                 <div class="sort-img">
@@ -240,8 +274,9 @@ fetch('./assets/data/data.json')
                                 <div class="sort-txt"> 
                                     <strong class="title">
                                         <div class="tag">
-                                            <span class="new"><span class="blind">NEW</span></span>
-                                            <span class="age"><span class="blind">15세 관람가</span></span>
+                                            ${isUp} 
+                                            ${isNew}
+                                            ${isAge}
                                         </div>
                                         ${el.title}
                                     </strong>
@@ -260,18 +295,25 @@ fetch('./assets/data/data.json')
     //랭킹
     rankhtml='';
     rank.forEach(el => {
+        
+        isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
         rankhtml += `<li class="sort-item rank">
                             <a href="" class="sort-area rank">
                                 <em class="ranknum">${el.rank}</em>
                                 <div class="sort-img rank">
                                     <img src="${el.img}" alt="${el.title}">
-                                    <span class="time"><span class="blind">무료 시간</span></span> 
+                                    ${timeEl}
                                 </div>
                                 <div class="sort-txt">
                                     <strong class="title">
                                         <div class="tag">
-                                            <span class="new"><span class="blind">NEW</span></span>
-                                            <span class="age"><span class="blind">15세 관람가</span></span>
+                                            ${isUp} 
+                                            ${isNew}
+                                            ${isAge}
                                         </div>
                                         ${el.title}
                                     </strong>
@@ -293,12 +335,18 @@ fetch('./assets/data/data.json')
     //월웹툰
     webmonhtml='';
     webmon.forEach(el => {
+
+        isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
         webmonhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -317,12 +365,19 @@ fetch('./assets/data/data.json')
     //화웹툰
     webtuehtml='';
     webtue.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         webtuehtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -341,12 +396,19 @@ fetch('./assets/data/data.json')
     //수웹툰
     webwedhtml='';
     webwed.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         webwedhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -365,12 +427,19 @@ fetch('./assets/data/data.json')
     //목웹툰
     webthrhtml='';
     webthr.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         webthrhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -389,12 +458,19 @@ fetch('./assets/data/data.json')
     //금웹툰
     webfrihtml='';
     webfri.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         webfrihtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -413,12 +489,19 @@ fetch('./assets/data/data.json')
     //토웹툰
     websathtml='';
     websat.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         websathtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -437,12 +520,19 @@ fetch('./assets/data/data.json')
     //일웹툰
     websunhtml='';
     websun.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         websunhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -461,12 +551,19 @@ fetch('./assets/data/data.json')
     //완결웹툰
     webendhtml='';
     webend.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         webendhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -485,12 +582,19 @@ fetch('./assets/data/data.json')
     //월소설
     novmonhtml='';
     novmon.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novmonhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -509,12 +613,19 @@ fetch('./assets/data/data.json')
     //화소설
     novtuehtml='';
     novtue.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novtuehtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -533,12 +644,19 @@ fetch('./assets/data/data.json')
     //수소설
     novwedhtml='';
     novwed.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novwedhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -557,12 +675,19 @@ fetch('./assets/data/data.json')
     //목소설
     novthrhtml='';
     novthr.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novthrhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -581,12 +706,19 @@ fetch('./assets/data/data.json')
     //금소설
     novfrihtml='';
     novfri.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novfrihtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -605,12 +737,19 @@ fetch('./assets/data/data.json')
     //토소설
     novsathtml='';
     novsat.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novsathtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -629,12 +768,19 @@ fetch('./assets/data/data.json')
     //일소설
     novsunhtml='';
     novsun.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novsunhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -653,12 +799,19 @@ fetch('./assets/data/data.json')
     //완결소설
     novendhtml='';
     novend.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
         novendhtml += `<li class="book-item">
                                     <a href="" class="book-area">
                                         <div class="book-img">
                                             <img src="${el.img}" alt="${el.title}">
                                             <span class="deco">
-                                            <span class="decostar"><span class="blind">별점</span></span>
+                                           <span class="decostar"><span class="blind">별점</span></span>
                                                 <span class="rank">${el.rank}</span> 
                                                 <span class="decoclock"><span class="blind">시간</span></span> 
                                             </span>
@@ -677,11 +830,18 @@ fetch('./assets/data/data.json')
      //밀리언웹툰
      milwebhtml='';
      milweb.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+        isStar = (el.star) ? starEl : '';
+
          milwebhtml += `<li class="sort-item">
                              <a href="" class="sort-area">
                                  <div class="sort-img">
                                      <img src="${el.img}" alt="${el.title}">
-                                     <span class="time"><span class="blind">무료 시간</span></span> 
+                                     ${timeEl} 
                                      <span class="milion"><span class="blind">밀리언페이지</span></span>
                                  </div>
                                  <div class="sort-txt">
@@ -696,14 +856,20 @@ fetch('./assets/data/data.json')
                          </li>`;
       });
 
-     //밀리언웹툰
+     //밀리언소설
      milnovhtml='';
      milnov.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
          milnovhtml += `<li class="sort-item">
                              <a href="" class="sort-area">
                                  <div class="sort-img">
                                      <img src="${el.img}" alt="${el.title}">
-                                     <span class="time"><span class="blind">무료 시간</span></span> 
+                                     ${timeEl} 
                                      <span class="milion"><span class="blind">밀리언페이지</span></span>
                                  </div>
                                  <div class="sort-txt">
@@ -721,11 +887,17 @@ fetch('./assets/data/data.json')
      //베스트웹툰
      besthtml='';
      best.forEach(el => {
+
+         isUp = (el.up) ? upEl : '';
+        isTime = (el.time) ? timeEl : '';
+        isNew = (el.new) ? newEl : '';
+        isAge = (el.age) ? ageEl : '';
+
          besthtml += `<li class="sort-item">
                              <a href="" class="sort-area">
                                  <div class="sort-img">
                                      <img src="${el.img}" alt="${el.title}">
-                                     <span class="time"><span class="blind">무료 시간</span></span> 
+                                     ${timeEl} 
                                  </div>
                                  <div class="sort-txt">
                                     <strong class="title">${el.title}</strong>
